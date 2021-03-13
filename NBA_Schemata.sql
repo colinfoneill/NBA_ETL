@@ -12,43 +12,43 @@ CREATE TABLE "player" (
 
 CREATE TABLE "demographics" (
     "player_id" VARCHAR   NOT NULL,
-    "height" NUMERIC   NOT NULL,
-    "weight" INT   NOT NULL,
-    "birth_year" INT   NOT NULL,
-    "birth_city" VARCHAR   NOT NULL,
-    "birth_state" VARCHAR   NOT NULL
+    "height" NUMERIC,
+    "weight" INT,
+    "birth_year" INT,
+    "birth_city" VARCHAR,
+    "birth_state" VARCHAR
 );
 
 CREATE TABLE "stats" (
     "name" VARCHAR   NOT NULL,
-    "g" INT   NOT NULL,
-    "mp" INT   NOT NULL,
-    "fg" INT   NOT NULL,
-    "fga" INT   NOT NULL,
-    "3p" INT   NOT NULL,
-    "3pa" INT   NOT NULL,
-    "ft" INT   NOT NULL,
-    "fta" INT   NOT NULL,
-    "orb" INT   NOT NULL,
-    "trb" INT   NOT NULL,
-    "ast" INT   NOT NULL,
-    "stl" INT   NOT NULL,
-    "blk" INT   NOT NULL,
-    "tov" INT   NOT NULL,
-    "pf" INT   NOT NULL,
-    "pts" INT   NOT NULL,
-    "fg%" NUMERIC   NOT NULL,
-    "3p%" NUMERIC   NOT NULL,
-    "ft%" NUMERIC   NOT NULL,
-    "mp_avg" NUMERIC   NOT NULL,
-    "pts_avg" NUMERIC   NOT NULL,
-    "trb_avg" NUMERIC   NOT NULL,
-    "ast_avg" NUMERIC   NOT NULL
+    "g" INT,
+    "mp" INT,
+    "fg" INT,
+    "fga" INT,
+    "3p" INT,
+    "3pa" INT,
+    "ft" INT,
+    "fta" INT,
+    "orb" INT,
+    "trb" INT,
+    "ast" INT,
+    "stl" INT,
+    "blk" INT,
+    "tov" INT,
+    "pf" INT,
+    "pts" INT,
+    "fg%" NUMERIC,
+    "3p%" NUMERIC,
+    "ft%" NUMERIC,
+    "mp_avg" NUMERIC,
+    "pts_avg" NUMERIC,
+    "trb_avg" NUMERIC,
+    "ast_avg" NUMERIC
 );
 
 CREATE TABLE "years_played" (
     "name" VARCHAR   NOT NULL,
-    "years" int   NOT NULL,
+    "years" int,
     CONSTRAINT "pk_years_played" PRIMARY KEY (
         "name"
      )
@@ -56,32 +56,32 @@ CREATE TABLE "years_played" (
 
 CREATE TABLE "salary" (
     "player_id" VARCHAR   NOT NULL,
-    "salary" INT   NOT NULL,
-    "season" INT   NOT NULL,
-    "team" VARCHAR   NOT NULL
+    "salary" INT,
+    "season" INT,
+    "team" VARCHAR
 );
 
 CREATE TABLE "position" (
     "player_id" VARCHAR   NOT NULL,
-    "position" VARCHAR   NOT NULL,
-    "shoots" VARCHAR   NOT NULL
+    "position" VARCHAR,
+    "shoots" VARCHAR
 );
 
 CREATE TABLE "draft" (
-    "player_id" VARCHAR   NOT NULL,
-    "draft_pick" VARCHAR   NOT NULL,
-    "draft_round" VARCHAR   NOT NULL,
-    "draft_team" VARCHAR   NOT NULL,
-    "draft_year" INT   NOT NULL
+    "player_id" VARCHAR NOT NULL,
+    "draft_pick" VARCHAR,
+    "draft_round" VARCHAR,
+    "draft_team" VARCHAR,
+    "draft_year" INT
 );
 
 CREATE TABLE "schools" (
-    "player_id" VARCHAR   NOT NULL,
-    "high_school" VARCHAR   NOT NULL,
-    "hs_city" VARCHAR   NOT NULL,
-    "hs_state" VARCHAR   NOT NULL,
-    "college" VARCHAR   NOT NULL,
-    "college_2" VARCHAR   NOT NULL
+    "player_id" VARCHAR,
+    "high_school" VARCHAR,
+    "hs_city" VARCHAR,
+    "hs_state" VARCHAR,
+    "college" VARCHAR,
+    "college_2" VARCHAR
 );
 
 ALTER TABLE "player" ADD CONSTRAINT "fk_player_name" FOREIGN KEY("name")
